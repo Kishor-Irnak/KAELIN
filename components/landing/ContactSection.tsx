@@ -115,7 +115,7 @@ export default function ContactSection() {
           <div className="mt-10 flex flex-wrap gap-3">
             {[
               "Shopify Partner",
-              "50+ Stores Built",
+              "250+ Stores Built",
               "Pan India",
               "GST Registered",
             ].map((b) => (

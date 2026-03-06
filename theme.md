@@ -225,7 +225,7 @@ transform: translateY(110%); /* Start hidden below */
     <!-- Parallax Feature Section -->
     <section class="relative h-[600px] md:h-[800px] w-full overflow-hidden parallax-wrapper">
         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&amp;w=2000&amp;auto=format&amp;fit=crop" class="absolute inset-0 w-full h-[120%] object-cover parallax-img" alt="Agency Workspace">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#1A2E22] via-[#1A2E22]/60 to-transparent opacity-90 z-0"></div>
+        <div class="absolute inset-0 bg-linear-to-t from-[#1A2E22] via-[#1A2E22]/60 to-transparent opacity-90 z-0"></div>
 
         <div class="relative z-10 h-full flex flex-col items-center justify-center px-4">
             <h2 class="reveal-text text-white serif-font text-4xl md:text-6xl mb-12 text-center">
@@ -245,7 +245,7 @@ transform: translateY(110%); /* Start hidden below */
                             <span class="text-green-300">99/100</span>
                         </div>
                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-green-200 to-green-400 w-[99%]"></div>
+                            <div class="h-full bg-linear-to-r from-green-200 to-green-400 w-[99%]"></div>
                         </div>
                     </div>
                     <div>
@@ -254,7 +254,7 @@ transform: translateY(110%); /* Start hidden below */
                             <span>&lt; 1.5s</span>
                         </div>
                         <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-green-200 to-green-400 w-[95%]"></div>
+                            <div class="h-full bg-linear-to-r from-green-200 to-green-400 w-[95%]"></div>
                         </div>
                     </div>
                 </div>
@@ -436,7 +436,7 @@ transform: translateY(110%); /* Start hidden below */
             <!-- Card 2 (Video style) -->
             <div class="bg-[#1A2E22] rounded-2xl overflow-hidden relative group h-[400px] md:h-auto text-white">
                 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&amp;w=800&amp;auto=format&amp;fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700" alt="E-commerce Analytics">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                     <div class="w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mb-4 cursor-pointer hover:bg-white hover:text-[#1A2E22] transition-colors">
                         <iconify-icon icon="solar:play-bold" class="ml-1"></iconify-icon>

@@ -69,41 +69,49 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="py-24 max-w-7xl mx-auto px-4">
-      <div className="text-center mb-16">
-        <span className="border border-[#1A2E22]/20 px-3 py-1 rounded-full text-[10px] uppercase tracking-wide">
-          Our Process
-        </span>
-        <h2
-          className="reveal-text text-4xl md:text-5xl mt-6"
-          style={{ fontFamily: "var(--font-newsreader), serif" }}
-        >
-          From idea to launch <br className="hidden md:block" /> in 4 simple
-          steps.
-        </h2>
-      </div>
+    <section
+      id="process"
+      className="py-24 bg-[#F3F1EB] text-[#1A2E22] border-t border-[#1A2E22]/10"
+    >
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-24">
+          <h2
+            className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-4"
+            style={{
+              fontFamily: "var(--font-inter), sans-serif",
+              fontWeight: 300,
+            }}
+          >
+            A Seamless Process
+            <br />
+            <span className="font-semibold text-lg md:text-xl tracking-widest block mt-4 text-[#1A2E22]/80">
+              For Building A Flawless Website
+            </span>
+          </h2>
+        </div>
 
-      <div className="grid md:grid-cols-4 gap-8">
-        {steps.map((step, i) => (
-          <div key={i} className="group relative">
-            {/* Connector line */}
-            {i < steps.length - 1 && (
-              <div className="hidden md:block absolute top-8 left-[60%] right-0 h-px bg-[#1A2E22]/10 z-0" />
-            )}
-            <div className="relative z-10">
-              <div className="w-16 h-16 rounded-2xl bg-white border border-[#1A2E22]/10 flex items-center justify-center mb-4 group-hover:bg-[#1A2E22] group-hover:border-[#1A2E22] text-[#1A2E22] group-hover:text-[#F3F1EB] transition-all shadow-sm group-hover:shadow-lg group-hover:shadow-[#1A2E22]/10">
-                {StepIcons[i]}
+        <div className="grid md:grid-cols-4 gap-8">
+          {steps.map((step, i) => (
+            <div key={i} className="group relative">
+              {/* Connector line */}
+              {i < steps.length - 1 && (
+                <div className="hidden md:block absolute top-8 left-[60%] right-0 h-px bg-[#1A2E22]/10 z-0" />
+              )}
+              <div className="relative z-10">
+                <div className="w-16 h-16 rounded-2xl bg-white border border-[#1A2E22]/10 flex items-center justify-center mb-4 group-hover:bg-[#1A2E22] group-hover:border-[#1A2E22] text-[#1A2E22] group-hover:text-[#F3F1EB] transition-all shadow-sm group-hover:shadow-lg group-hover:shadow-[#1A2E22]/10">
+                  {StepIcons[i]}
+                </div>
+                <div className="text-[10px] font-bold uppercase tracking-widest text-[#1A2E22]/30 mb-2">
+                  {step.num}
+                </div>
+                <h3 className="font-semibold mb-2">{step.title}</h3>
+                <p className="text-sm text-[#1A2E22]/60 leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[#1A2E22]/30 mb-2">
-                {step.num}
-              </div>
-              <h3 className="font-semibold mb-2">{step.title}</h3>
-              <p className="text-sm text-[#1A2E22]/60 leading-relaxed">
-                {step.desc}
-              </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

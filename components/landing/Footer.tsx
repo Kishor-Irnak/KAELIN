@@ -19,9 +19,9 @@ export default function Footer() {
             <div className="flex gap-4">
               <a
                 href="#contact"
-                className="text-xs font-medium bg-[#F3F1EB] text-[#1A2E22] px-5 py-2.5 rounded-full hover:bg-white transition-colors"
+                className="btn-premium btn-premium-light text-xs font-medium bg-[#F3F1EB] text-[#1A2E22] px-5 py-2.5 rounded-full transition-colors"
               >
-                Request a Proposal
+                <span className="relative z-10">Request a Proposal</span>
               </a>
             </div>
           </div>
@@ -91,10 +91,10 @@ export default function Footer() {
       {/* Big Background Text */}
       <div className="w-full text-center leading-none overflow-hidden border-t border-[#F3F1EB]/5">
         <h1
-          className="text-[26vw] leading-[0.75] text-[#F3F1EB]/5 tracking-tighter select-none pointer-events-none -mb-[0.05em] pt-4 parallax-footer-text"
-          style={{ fontFamily: "var(--font-newsreader), serif" }}
+          className="text-[14vw] leading-[0.8] text-[#F3F1EB]/10 tracking-tight font-bold whitespace-nowrap select-none pointer-events-none -mb-[0.05em] pt-8 pb-4 parallax-footer-text"
+          style={{ fontFamily: "var(--font-inter), sans-serif" }}
         >
-          KAELIN
+          KAELIN SERVICES
         </h1>
       </div>
     </footer>

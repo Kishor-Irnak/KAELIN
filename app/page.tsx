@@ -3,15 +3,18 @@
 import { useEffect } from "react";
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
-import QuoteSection from "@/components/landing/QuoteSection";
-import CategoriesSection from "@/components/landing/CategoriesSection";
-import ParallaxSection from "@/components/landing/ParallaxSection";
-import ServicesSection from "@/components/landing/ServicesSection";
-import TestimonialsSection from "@/components/landing/TestimonialsSection";
-import ProcessSection from "@/components/landing/ProcessSection";
-import ContactSection from "@/components/landing/ContactSection";
-import Footer from "@/components/landing/Footer";
 import PortfolioSection from "@/components/landing/PortfolioSection";
+import ProcessSection from "@/components/landing/ProcessSection";
+import Footer from "@/components/landing/Footer";
+import CustomEcommerceSection from "@/components/landing/CustomEcommerceSection";
+import ExpectationsSection from "@/components/landing/ExpectationsSection";
+import AgencyComparisonSection from "@/components/landing/AgencyComparisonSection";
+import DiscoveryCallSection from "@/components/landing/DiscoveryCallSection";
+import ReasonsSection from "@/components/landing/ReasonsSection";
+import ConsultationFormSection from "@/components/landing/ConsultationFormSection";
+import FaqSection from "@/components/landing/FaqSection";
+import AvailableHiringSection from "@/components/landing/AvailableHiringSection";
+import PricingSection from "@/components/landing/PricingSection";
 
 export default function Page() {
   useEffect(() => {
@@ -52,14 +55,17 @@ export default function Page() {
     <div className="bg-[#F3F1EB] text-[#1A2E22]">
       <Navbar />
       <Hero />
-      <QuoteSection />
+      <CustomEcommerceSection />
       <PortfolioSection />
-      <CategoriesSection />
-      <ParallaxSection />
-      <ServicesSection />
+      <PricingSection />
+      <ExpectationsSection />
+      <AgencyComparisonSection />
+      <DiscoveryCallSection />
       <ProcessSection />
-      <TestimonialsSection />
-      <ContactSection />
+      <ReasonsSection />
+      <ConsultationFormSection />
+      <FaqSection />
+      <AvailableHiringSection />
       <Footer />
     </div>
   );

@@ -46,7 +46,7 @@ export default function Navbar() {
           </div>
 
           {/* Center: Logo */}
-          <div className="flex items-center gap-2 absolute left-1/2 transform -translate-x-1/2">
+          <div className="flex items-center gap-2 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
             <svg
               width="24"
               height="24"
@@ -127,18 +127,21 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden pb-4 pt-2 border-t border-[#1A2E22]/5 space-y-3">
-            {["#services", "#categories", "#process", "#contact"].map(
-              (href, i) => (
-                <a
-                  key={i}
-                  href={href}
-                  className="block text-sm font-medium text-[#1A2E22]/70 hover:text-[#1A2E22] py-1 transition-colors"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {href.slice(1).charAt(0).toUpperCase() + href.slice(2)}
-                </a>
-              ),
-            )}
+            {[
+              { label: "Services", href: "#services" },
+              { label: "Categories", href: "#categories" },
+              { label: "How It Works", href: "#process" },
+              { label: "Contact", href: "#contact" },
+            ].map(({ label, href }, i) => (
+              <a
+                key={i}
+                href={href}
+                className="block text-sm font-medium text-[#1A2E22]/70 hover:text-[#1A2E22] py-1 transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </a>
+            ))}
           </div>
         )}
       </div>

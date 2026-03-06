@@ -2,6 +2,19 @@
 
 import { useEffect } from "react";
 
+const DATA = [
+  "https://i.postimg.cc/Hxbbxwqx/kaelin-1.png",
+  "https://i.postimg.cc/D0BJJB56/kaelin-2.png",
+  "https://i.postimg.cc/cL8C0xqk/kaelin-3.png",
+  "https://i.postimg.cc/SNYkzgZn/kaelin-4.png",
+  "https://i.postimg.cc/Pq2B7D6R/kaelin-5.png",
+  "https://i.postimg.cc/wj0pCnMn/kaelin-6.png",
+  "https://i.postimg.cc/FRSwH6r6/kaelin-7.png",
+  "https://i.postimg.cc/MprLbwvz/kaelin-8.png",
+  "https://i.postimg.cc/vH02by7W/kaelin-9.png",
+  "https://i.postimg.cc/pTQk7MXB/kaelin-10.png",
+];
+
 export default function Hero() {
   useEffect(() => {
     const init = async () => {
@@ -99,163 +112,229 @@ export default function Hero() {
   }, []);
 
   return (
-    <main className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      {/* Trust Badge */}
-      <div
-        id="hero-badge"
-        className="flex flex-col md:flex-row justify-center items-center gap-4 mb-8 opacity-0 translate-y-4"
-      >
-        <div className="flex -space-x-2">
-          {[
-            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=60",
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=60",
-            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=60",
-          ].map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              className="w-6 h-6 rounded-full border border-[#F3F1EB] object-cover"
-              alt="Client"
-            />
-          ))}
-        </div>
-        <span className="text-xs font-medium tracking-wide uppercase text-[#1A2E22]/60">
-          50+ Shopify Stores Built Across India
-        </span>
-      </div>
-
-      {/* Headline */}
-      <div className="text-center max-w-4xl mx-auto mb-16">
-        <h1
-          className="reveal-text text-5xl md:text-7xl leading-[1.1] font-light tracking-tight mb-6"
-          style={{ fontFamily: "var(--font-newsreader), serif" }}
+    <section className="relative w-full overflow-hidden">
+      {/* Background 3D Carousel */}
+      <div className="absolute inset-x-0 -top-16 md:-top-32 h-[800px] md:h-[1000px] z-0 pointer-events-none flex items-center justify-center opacity-30 select-none overflow-hidden scale-110 md:scale-100">
+        <div
+          className="scene"
+          style={{
+            WebkitMask:
+              "linear-gradient(90deg, transparent, white 20% 80%, transparent)",
+            mask: "linear-gradient(90deg, transparent, white 20% 80%, transparent)",
+            perspective: "35em",
+            display: "grid",
+            overflow: "hidden",
+            width: "100%",
+            height: "100%",
+          }}
         >
-          Your Dream Shopify Store, Built for India.
-        </h1>
-        <p className="text-lg text-[#1A2E22]/70 max-w-xl mx-auto leading-relaxed">
-          We craft premium Shopify storefronts for every category — fashion,
-          electronics, furniture, and beyond.{" "}
-          <span className="md:block">
-            Starting from ₹50,000. Launched in weeks.
-          </span>
-        </p>
-        <div className="mt-8 opacity-0 translate-y-4" id="hero-cta">
-          <a
-            href="#contact"
-            className="inline-block bg-[#1A2E22] text-[#F3F1EB] px-8 py-3.5 rounded-full text-sm font-medium hover:scale-105 transition-transform duration-300 shadow-xl shadow-[#1A2E22]/10"
+          <div
+            className="a3d"
+            style={
+              {
+                "--n": DATA.length,
+                display: "grid",
+                placeSelf: "center",
+                transformStyle: "preserve-3d",
+                animation: "ry 32s linear infinite",
+              } as React.CSSProperties
+            }
           >
-            Book Free Consultation
-          </a>
-        </div>
-      </div>
-
-      {/* Bento Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[500px]">
-        {/* Left Image */}
-        <div className="md:col-span-4 rounded-2xl overflow-hidden relative group h-[300px] md:h-full parallax-wrapper">
-          <img
-            src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=800&auto=format&fit=crop"
-            className="w-full h-[120%] object-cover parallax-img"
-            alt="Fashion Shopify Store"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-          <div className="absolute bottom-4 left-4 text-white z-10">
-            <p className="text-xs font-medium bg-black/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 inline-flex items-center gap-1">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-              Mobile-First Design
-            </p>
-          </div>
-        </div>
-
-        {/* Middle Card */}
-        <div className="md:col-span-4 bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm border border-[#1A2E22]/5">
-          <div>
-            <div className="flex justify-between items-start mb-4">
-              <div className="w-12 h-12 rounded-full bg-[#F3F1EB] flex items-center justify-center">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H15V15H9V21H4C3.44772 21 3 20.5523 3 20V9Z"
-                    stroke="#1A2E22"
-                    strokeWidth="1.5"
-                  />
-                </svg>
-              </div>
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                className="text-[#1A2E22]/20"
-              >
-                <rect
-                  x="2"
-                  y="4"
-                  width="20"
-                  height="16"
-                  rx="2"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <path
-                  d="M6 8H18M6 12H14M6 16H10"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
-            <h3
-              className="text-2xl mb-1"
-              style={{ fontFamily: "var(--font-newsreader), serif" }}
-            >
-              Premium Architecture
-            </h3>
-            <p className="text-xs text-[#1A2E22]/60">
-              Extreme focus on conversion rate (CRO).
-            </p>
-          </div>
-          <div className="space-y-3 mt-8">
-            {[
-              { label: "Platform", value: "Shopify & Shopify Plus" },
-              { label: "Design", value: "Custom UI/UX" },
-              { label: "Delivery", value: "2–4 Weeks" },
-            ].map(({ label, value }) => (
-              <div
-                key={label}
-                className="flex justify-between text-xs border-b border-gray-100 pb-2 last:border-0"
-              >
-                <span className="text-gray-500">{label}</span>
-                <span className="font-medium">{value}</span>
-              </div>
+            {DATA.map((url, i) => (
+              <img
+                key={i}
+                className="card-bg"
+                src={url}
+                alt="hero bg"
+                style={{ "--i": i } as React.CSSProperties}
+              />
             ))}
           </div>
         </div>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+          @keyframes ry { to { transform: rotateY(1turn); } }
+          .a3d { animation: ry 32s linear infinite; }
+          .card-bg {
+             --w: 18em; 
+             --ba: calc(1turn / var(--n));
+             grid-area: 1 / 1;
+             width: var(--w);
+             aspect-ratio: 7 / 10;
+             object-fit: cover;
+             border-radius: 1.5em;
+             backface-visibility: hidden;
+             transform: rotateY(calc(var(--i) * var(--ba))) translateZ(calc(-1 * (0.5 * var(--w) + 1em) / tan(0.5 * var(--ba))));
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .a3d { animation-duration: 128s; }
+          }
+        `,
+          }}
+        />
+      </div>
 
-        {/* Right Image */}
-        <div className="md:col-span-4 rounded-2xl overflow-hidden relative group h-[300px] md:h-full parallax-wrapper">
-          <img
-            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop"
-            className="w-full h-[120%] object-cover parallax-img"
-            alt="Shopify Store Analytics"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <div className="absolute bottom-4 left-4 text-white max-w-[80%] z-10">
-            <p
-              className="text-xl leading-tight"
-              style={{ fontFamily: "var(--font-newsreader), serif" }}
+      {/* Glow Behind Text to improve readability against dark images */}
+      <div className="absolute inset-0 z-5 pointer-events-none bg-[radial-gradient(circle_at_50%_35%,rgba(243,241,235,0.95)_0%,rgba(243,241,235,0.5)_30%,rgba(243,241,235,0)_60%)]"></div>
+
+      <div className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        {/* Trust Badge */}
+        <div
+          id="hero-badge"
+          className="flex flex-col md:flex-row justify-center items-center gap-4 mb-8 opacity-0 translate-y-4"
+        >
+          <div className="flex -space-x-2">
+            {[
+              "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=60",
+              "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=60",
+              "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=60",
+            ].map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                className="w-6 h-6 rounded-full border border-[#F3F1EB] object-cover"
+                alt="Client"
+              />
+            ))}
+          </div>
+          <span className="text-xs font-medium tracking-wide uppercase text-[#1A2E22]/60">
+            250+ Shopify Stores Built Across India
+          </span>
+        </div>
+
+        {/* Headline */}
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <h1
+            className="reveal-text text-5xl md:text-7xl leading-[1.1] font-light tracking-tight mb-6"
+            style={{ fontFamily: "var(--font-newsreader), serif" }}
+          >
+            Want a Custom Ecommerce Website <br className="hidden md:block" />{" "}
+            in Just 1 Week?
+          </h1>
+          <p className="text-lg text-[#1A2E22]/70 max-w-2xl mx-auto leading-relaxed">
+            Yesssss! Your dream website! <br className="hidden md:block" />
+            All you need to do is tell us your requirements and we create a
+            website that will give you more brand visibility and sales!
+          </p>
+          <div className="mt-8 opacity-0 translate-y-4" id="hero-cta">
+            <a
+              href="#contact"
+              className="btn-premium inline-flex items-center justify-center bg-[#1A2E22] text-[#F3F1EB] px-8 py-3.5 rounded-full text-sm font-medium transition-all shadow-xl shadow-[#1A2E22]/10"
             >
-              Designs that turn visitors into loyal customers.
-            </p>
+              <span className="relative z-10">Book Free Consultation</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[500px]">
+          {/* Left Image */}
+          <div className="md:col-span-4 rounded-2xl overflow-hidden relative group h-[300px] md:h-full parallax-wrapper">
+            <img
+              src="https://i.postimg.cc/FRSwH6r6/kaelin-7.png"
+              className="w-full h-[120%] object-cover parallax-img"
+              alt="Fashion Shopify Store"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
+            <div className="absolute bottom-4 left-4 text-white z-10">
+              <p className="text-xs font-medium bg-black/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 inline-flex items-center gap-1">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+                Mobile-First Design
+              </p>
+            </div>
+          </div>
+
+          {/* Middle Card */}
+          <div className="md:col-span-4 bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm border border-[#1A2E22]/5">
+            <div>
+              <div className="flex justify-between items-start mb-4">
+                <div className="w-12 h-12 rounded-full bg-[#F3F1EB] flex items-center justify-center">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H15V15H9V21H4C3.44772 21 3 20.5523 3 20V9Z"
+                      stroke="#1A2E22"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                </div>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="text-[#1A2E22]/20"
+                >
+                  <rect
+                    x="2"
+                    y="4"
+                    width="20"
+                    height="16"
+                    rx="2"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                  <path
+                    d="M6 8H18M6 12H14M6 16H10"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+              <h3
+                className="text-2xl mb-1"
+                style={{ fontFamily: "var(--font-newsreader), serif" }}
+              >
+                Premium Architecture
+              </h3>
+              <p className="text-xs text-[#1A2E22]/60">
+                Extreme focus on conversion rate (CRO).
+              </p>
+            </div>
+            <div className="space-y-3 mt-8">
+              {[
+                { label: "Platform", value: "Shopify & Shopify Plus" },
+                { label: "Design", value: "Custom UI/UX" },
+                { label: "Delivery", value: "2–4 Weeks" },
+              ].map(({ label, value }) => (
+                <div
+                  key={label}
+                  className="flex justify-between text-xs border-b border-gray-100 pb-2 last:border-0"
+                >
+                  <span className="text-gray-500">{label}</span>
+                  <span className="font-medium">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Image */}
+          <div className="md:col-span-4 rounded-2xl overflow-hidden relative group h-[300px] md:h-full parallax-wrapper">
+            <img
+              src="https://i.postimg.cc/MprLbwvz/kaelin-8.png"
+              className="w-full h-[120%] object-cover parallax-img"
+              alt="Shopify Store Analytics"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
+            <div className="absolute bottom-4 left-4 text-white max-w-[80%] z-10">
+              <p
+                className="text-xl leading-tight"
+                style={{ fontFamily: "var(--font-newsreader), serif" }}
+              >
+                Designs that turn visitors into loyal customers.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }
