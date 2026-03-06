@@ -220,118 +220,12 @@ export default function Hero() {
           <div className="mt-8 opacity-0 translate-y-4" id="hero-cta">
             <a
               href="#contact"
-              className="btn-premium inline-flex items-center justify-center bg-[#1A2E22] text-[#F3F1EB] px-8 py-3.5 rounded-full text-sm font-medium transition-all shadow-xl shadow-[#1A2E22]/10"
+              className="btn-hero-premium inline-flex items-center justify-center bg-[#1A2E22] text-[#F3F1EB] px-10 py-4 rounded-full text-[15px] uppercase tracking-widest font-bold transition-all"
             >
-              <span className="relative z-10">Book Free Consultation</span>
+              <span className="relative z-10 w-full text-center">
+                Book Free Consultation
+              </span>
             </a>
-          </div>
-        </div>
-
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[500px]">
-          {/* Left Image */}
-          <div className="md:col-span-4 rounded-2xl overflow-hidden relative group h-[300px] md:h-full parallax-wrapper">
-            <img
-              src="https://i.postimg.cc/FRSwH6r6/kaelin-7.png"
-              className="w-full h-[120%] object-cover parallax-img"
-              alt="Fashion Shopify Store"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
-            <div className="absolute bottom-4 left-4 text-white z-10">
-              <p className="text-xs font-medium bg-black/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 inline-flex items-center gap-1">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                Mobile-First Design
-              </p>
-            </div>
-          </div>
-
-          {/* Middle Card */}
-          <div className="md:col-span-4 bg-white rounded-2xl p-6 flex flex-col justify-between shadow-sm border border-[#1A2E22]/5">
-            <div>
-              <div className="flex justify-between items-start mb-4">
-                <div className="w-12 h-12 rounded-full bg-[#F3F1EB] flex items-center justify-center">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H15V15H9V21H4C3.44772 21 3 20.5523 3 20V9Z"
-                      stroke="#1A2E22"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
-                </div>
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="text-[#1A2E22]/20"
-                >
-                  <rect
-                    x="2"
-                    y="4"
-                    width="20"
-                    height="16"
-                    rx="2"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  />
-                  <path
-                    d="M6 8H18M6 12H14M6 16H10"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </div>
-              <h3
-                className="text-2xl mb-1"
-                style={{ fontFamily: "var(--font-newsreader), serif" }}
-              >
-                Premium Architecture
-              </h3>
-              <p className="text-xs text-[#1A2E22]/60">
-                Extreme focus on conversion rate (CRO).
-              </p>
-            </div>
-            <div className="space-y-3 mt-8">
-              {[
-                { label: "Platform", value: "Shopify & Shopify Plus" },
-                { label: "Design", value: "Custom UI/UX" },
-                { label: "Delivery", value: "2–4 Weeks" },
-              ].map(({ label, value }) => (
-                <div
-                  key={label}
-                  className="flex justify-between text-xs border-b border-gray-100 pb-2 last:border-0"
-                >
-                  <span className="text-gray-500">{label}</span>
-                  <span className="font-medium">{value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="md:col-span-4 rounded-2xl overflow-hidden relative group h-[300px] md:h-full parallax-wrapper">
-            <img
-              src="https://i.postimg.cc/MprLbwvz/kaelin-8.png"
-              className="w-full h-[120%] object-cover parallax-img"
-              alt="Shopify Store Analytics"
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
-            <div className="absolute bottom-4 left-4 text-white max-w-[80%] z-10">
-              <p
-                className="text-xl leading-tight"
-                style={{ fontFamily: "var(--font-newsreader), serif" }}
-              >
-                Designs that turn visitors into loyal customers.
-              </p>
-            </div>
           </div>
         </div>
       </div>

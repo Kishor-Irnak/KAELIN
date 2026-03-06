@@ -60,7 +60,7 @@ export default function Page() {
             ease: "power3.out",
             scrollTrigger: {
               trigger: el,
-              start: "top 85%",
+              start: "top 95%",
               toggleActions: "play none none reverse",
             },
           },
@@ -81,7 +81,7 @@ export default function Page() {
             ease: "power3.out",
             scrollTrigger: {
               trigger: grid,
-              start: "top 80%",
+              start: "top 95%",
               toggleActions: "play none none reverse",
             },
           },
