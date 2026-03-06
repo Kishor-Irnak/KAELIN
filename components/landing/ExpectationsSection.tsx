@@ -10,7 +10,7 @@ export default function ExpectationsSection() {
           {/* Left Column */}
           <div>
             <h2
-              className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-12 leading-tight"
+              className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-12 leading-tight fade-up"
               style={{
                 fontFamily: "var(--font-inter), sans-serif",
                 fontWeight: 300,
@@ -22,7 +22,7 @@ export default function ExpectationsSection() {
               </span>
             </h2>
 
-            <div className="space-y-8">
+            <div className="space-y-8 stagger-grid">
               <div className="flex gap-6 items-start">
                 <span
                   className="text-4xl font-light text-[#1A2E22]/40"
@@ -85,7 +85,7 @@ export default function ExpectationsSection() {
           </div>
 
           {/* Right Column / Box */}
-          <div className="border-t-4 border-[#1A2E22] bg-[#F3F1EB] p-12 shadow-sm relative">
+          <div className="border-t-4 border-[#1A2E22] bg-[#F3F1EB] p-12 shadow-sm relative fade-up">
             <h3
               className="text-2xl font-light uppercase tracking-widest mb-2"
               style={{

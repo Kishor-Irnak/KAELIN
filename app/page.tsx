@@ -19,7 +19,7 @@ import PricingSection from "@/components/landing/PricingSection";
 export default function Page() {
   useEffect(() => {
     // Footer parallax — initialized here so it runs after all components mount
-    const initFooterParallax = async () => {
+    const initAnimations = async () => {
       if (typeof window === "undefined") return;
       let tries = 0;
       while (!(window as any).gsap && tries < 30) {
@@ -32,6 +32,7 @@ export default function Page() {
 
       gsap.registerPlugin(ScrollTrigger);
 
+      // Footer Parallax
       gsap.fromTo(
         ".parallax-footer-text",
         { y: "-20%" },
@@ -46,9 +47,49 @@ export default function Page() {
           },
         },
       );
+
+      // Global Fade Up Animations
+      gsap.utils.toArray(".fade-up").forEach((el: any) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+      });
+
+      // Global Stagger Grids
+      gsap.utils.toArray(".stagger-grid").forEach((grid: any) => {
+        const items = grid.children;
+        gsap.fromTo(
+          items,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: grid,
+              start: "top 80%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+      });
     };
 
-    initFooterParallax();
+    initAnimations();
   }, []);
 
   return (

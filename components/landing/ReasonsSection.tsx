@@ -47,7 +47,7 @@ export default function ReasonsSection() {
     <section className="bg-white py-24 text-[#1A2E22] border-t border-[#1A2E22]/10">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2
-          className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-16 text-[#1A2E22]"
+          className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-16 text-[#1A2E22] fade-up"
           style={{
             fontFamily: "var(--font-inter), sans-serif",
             fontWeight: 300,
@@ -59,7 +59,7 @@ export default function ReasonsSection() {
           </span>
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-12 stagger-grid">
           {reasons.map((item, i) => (
             <div
               key={i}

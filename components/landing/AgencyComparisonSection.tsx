@@ -6,7 +6,7 @@ export default function AgencyComparisonSection() {
   return (
     <section className="bg-[#F3F1EB] py-24 text-[#1A2E22]">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 fade-up">
           <h2
             className="text-4xl md:text-5xl uppercase tracking-wider font-light mb-4"
             style={{
@@ -21,14 +21,14 @@ export default function AgencyComparisonSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-0 overflow-hidden rounded-[2rem] border border-[#1A2E22]/10 shadow-sm max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-0 overflow-hidden rounded-[2rem] border border-[#1A2E22]/10 shadow-sm max-w-4xl mx-auto fade-up">
           {/* Traditional Agency */}
           <div className="bg-white p-12 relative flex flex-col justify-center">
             <h3 className="text-xl font-bold uppercase tracking-wider mb-8 text-center text-[#1A2E22]/60">
               Traditional Agency
             </h3>
 
-            <ul className="space-y-6">
+            <ul className="space-y-6 stagger-grid">
               {[
                 "Slow delivery (30-60 Days)",
                 "Pre-made templates used",
@@ -56,7 +56,7 @@ export default function AgencyComparisonSection() {
               Scoop Commerce
             </h3>
 
-            <ul className="space-y-6">
+            <ul className="space-y-6 stagger-grid">
               {[
                 "1-Week fast delivery",
                 "100% Custom coded designs",

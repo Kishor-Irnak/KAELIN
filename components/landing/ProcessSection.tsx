@@ -74,7 +74,7 @@ export default function ProcessSection() {
       className="py-24 bg-[#F3F1EB] text-[#1A2E22] border-t border-[#1A2E22]/10"
     >
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-24">
+        <div className="text-center mb-24 fade-up">
           <h2
             className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-4"
             style={{
@@ -90,7 +90,7 @@ export default function ProcessSection() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8 stagger-grid">
           {steps.map((step, i) => (
             <div key={i} className="group relative">
               {/* Connector line */}

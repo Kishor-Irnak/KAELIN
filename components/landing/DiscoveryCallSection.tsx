@@ -7,7 +7,7 @@ export default function DiscoveryCallSection() {
     <section className="bg-white py-24 text-[#1A2E22] border-t border-[#1A2E22]/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2
-          className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-4 text-[#1A2E22]"
+          className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-4 text-[#1A2E22] fade-up"
           style={{
             fontFamily: "var(--font-inter), sans-serif",
             fontWeight: 300,
@@ -21,7 +21,7 @@ export default function DiscoveryCallSection() {
           Are you ready to grow? Let&apos;s take your business to the next level
         </p>
 
-        <div className="relative max-w-4xl mx-auto py-16">
+        <div className="relative max-w-4xl mx-auto py-16 fade-up delay-100">
           {/* Connecting dashed lines and pointers (hidden on small screens) */}
           <div className="hidden md:block absolute inset-0 max-w-2xl mx-auto">
             <svg className="absolute w-full h-full" style={{ left: 0, top: 0 }}>
@@ -115,7 +115,7 @@ export default function DiscoveryCallSection() {
           </div>
         </div>
 
-        <div className="mt-16 max-w-lg mx-auto">
+        <div className="mt-16 max-w-lg mx-auto fade-up delay-200">
           <h3 className="text-xl md:text-2xl uppercase tracking-wider font-light mb-2 text-[#1A2E22]">
             15 Minute Rapid Discovery
           </h3>

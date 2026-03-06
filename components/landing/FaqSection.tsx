@@ -37,7 +37,7 @@ export default function FaqSection() {
     <section className="bg-white py-24 text-[#1A2E22] border-t border-[#1A2E22]/10">
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2
-          className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-16"
+          className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-16 fade-up"
           style={{
             fontFamily: "var(--font-inter), sans-serif",
             fontWeight: 300,
@@ -46,7 +46,7 @@ export default function FaqSection() {
           Frequently Asked Questions
         </h2>
 
-        <div className="text-left space-y-4">
+        <div className="text-left space-y-4 stagger-grid">
           {faqs.map((faq, i) => (
             <div
               key={i}

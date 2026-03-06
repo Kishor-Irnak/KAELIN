@@ -7,7 +7,7 @@ export default function CustomEcommerceSection() {
     <section className="bg-[#F3F1EB] py-24 px-4 text-[#1A2E22]">
       <div className="max-w-4xl mx-auto text-center">
         <h2
-          className="text-4xl md:text-5xl lg:text-6xl uppercase tracking-wider mb-6 leading-tight"
+          className="fade-up text-4xl md:text-5xl lg:text-6xl uppercase tracking-wider mb-6 leading-tight"
           style={{
             fontFamily: "var(--font-inter), sans-serif",
             fontWeight: 300,
@@ -35,8 +35,8 @@ export default function CustomEcommerceSection() {
         </a>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-24 border-t border-b border-[#1A2E22]/10 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-[#1A2E22]/10">
+      <div className="fade-up max-w-6xl mx-auto mt-24 border-t border-b border-[#1A2E22]/10 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-[#1A2E22]/10 stagger-grid">
           <div className="flex flex-col items-center text-center px-4 pt-4 md:pt-0">
             <div className="w-16 h-16 border border-[#1A2E22]/20 rounded-full flex items-center justify-center mb-6">
               <span className="text-2xl font-light">2X</span>

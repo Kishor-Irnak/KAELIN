@@ -9,7 +9,7 @@ export default function PricingSection() {
       className="bg-[#F3F1EB] py-24 text-[#1A2E22] border-t border-[#1A2E22]/10"
     >
       <div className="max-w-5xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 fade-up">
           <h2 className="text-4xl md:text-5xl uppercase tracking-wider font-light mb-4">
             Pricing Plans
           </h2>
@@ -18,7 +18,7 @@ export default function PricingSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 stagger-grid">
           {/* E-Commerce Plan */}
           <div className="bg-white rounded-[2rem] p-10 border border-[#1A2E22] shadow-sm flex flex-col hover:-translate-y-1 transition-transform">
             <div className="mb-8">

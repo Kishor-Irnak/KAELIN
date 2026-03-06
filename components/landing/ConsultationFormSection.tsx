@@ -10,7 +10,7 @@ export default function ConsultationFormSection() {
     >
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2
-          className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-4"
+          className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-4 fade-up"
           style={{
             fontFamily: "var(--font-inter), sans-serif",
             fontWeight: 300,
@@ -21,7 +21,7 @@ export default function ConsultationFormSection() {
           Consultation Call
         </h2>
 
-        <div className="bg-white rounded-[2rem] p-12 mt-16 shadow-sm border border-[#1A2E22]/10 relative overflow-hidden">
+        <div className="bg-white rounded-[2rem] p-12 mt-16 shadow-sm border border-[#1A2E22]/10 relative overflow-hidden fade-up">
           {/* subtle background graphic */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#F3F1EB] rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
 
