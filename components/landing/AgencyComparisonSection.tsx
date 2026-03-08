@@ -53,7 +53,7 @@ export default function AgencyComparisonSection() {
           {/* Us / Scoop */}
           <div className="bg-[#1A2E22] text-[#F3F1EB] p-12 relative flex flex-col justify-center border-l-4 border-[#F3F1EB]">
             <h3 className="text-xl font-bold uppercase tracking-wider mb-8 text-center">
-              Scoop Commerce
+              KAELIN COMMERCE
             </h3>
 
             <ul className="space-y-6 stagger-grid">
