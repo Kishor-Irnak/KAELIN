@@ -127,13 +127,13 @@ export default function Hero() {
       {/* Glow Behind Text to improve readability against dark images */}
       <div className="absolute inset-0 z-5 pointer-events-none bg-[radial-gradient(ellipse_at_50%_40%,rgba(243,241,235,0.9)_0%,rgba(243,241,235,0)_60%)] md:bg-[radial-gradient(circle_at_50%_35%,rgba(243,241,235,0.95)_0%,rgba(243,241,235,0.5)_30%,rgba(243,241,235,0)_60%)]"></div>
 
-      <div className="relative z-10 pt-16 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="relative z-10 pt-28 md:pt-32 pb-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Trust Badge */}
         <div
           id="hero-badge"
           className="flex flex-col md:flex-row justify-center items-center gap-4 mb-8"
         >
-          <div className="flex -space-x-2">
+          <div className="flex -space-x-2 pt-4 md:pt-0">
             {[
               "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=60",
               "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=60",
@@ -153,7 +153,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-4">
           <h1
             className="text-5xl md:text-7xl leading-[1.1] font-light tracking-tight mb-6"
             style={{ fontFamily: "var(--font-newsreader), serif" }}

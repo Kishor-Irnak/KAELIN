@@ -47,9 +47,9 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="py-12 md:py-24 bg-[#F3F1EB]">
+    <section id="portfolio" className="pb-12 pt-4 md:pb-24 md:pt-12 bg-[#F3F1EB]">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto px-4 mb-10 md:mb-20">
+      <div className="max-w-7xl mx-auto px-4 mb-4 md:mb-12">
         <div className="flex flex-col text-center items-center">
           <h2
             className="reveal-text text-4xl md:text-5xl uppercase tracking-wider font-light text-[#1A2E22]"
@@ -108,27 +108,36 @@ export default function PortfolioSection() {
         </div>
       </div>
 
-      {/* Bottom strip — full bleed stats */}
-      <div className="mt-16 border-t border-b border-[#1A2E22]/5 bg-[#F3F1EB]">
-        <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { num: "250+", label: "Stores Launched" },
-            { num: "12+", label: "Categories Served" },
-            { num: "99", label: "Avg Lighthouse Score" },
-            { num: "4 Wks", label: "Avg Delivery Time" },
-          ].map(({ num, label }) => (
-            <div key={label} className="text-center">
-              <div
-                className="text-3xl md:text-4xl font-light mb-1"
-                style={{ fontFamily: "var(--font-newsreader), serif" }}
+      {/* Stats Section with Premium Floating Card Effect */}
+      <div className="mt-20 md:mt-32 mb-8 md:mb-16 relative perspective-1000">
+        <div className="max-w-6xl mx-auto px-4 lg:px-8 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 bg-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-xl rounded-[2rem] py-12 px-6 md:py-16 md:px-12 border border-[#1A2E22]/5 overflow-hidden relative group">
+            
+            {/* Subtle animated gradient background inside the card */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-white/10 opacity-50 pointer-events-none transition-transform duration-700 group-hover:scale-105" />
+
+            {[
+              { num: "250+", label: "Stores Launched" },
+              { num: "12+", label: "Categories Served" },
+              { num: "99", label: "Avg Lighthouse Score" },
+              { num: "4 Wks", label: "Avg Delivery Time" },
+            ].map(({ num, label }) => (
+              <div 
+                key={label} 
+                className="text-center relative z-10 transition-all duration-500 hover:-translate-y-2 cursor-default"
               >
-                {num}
+                <div
+                  className="text-4xl md:text-5xl lg:text-[56px] font-light mb-3 md:mb-4 text-[#1A2E22] transition-colors duration-500 hover:text-[#2E8B7A]"
+                  style={{ fontFamily: "var(--font-newsreader), serif", letterSpacing: "-0.02em" }}
+                >
+                  {num}
+                </div>
+                <div className="text-[10px] md:text-xs text-[#1A2E22]/50 font-bold uppercase tracking-[0.2em] md:tracking-[0.25em]">
+                  {label}
+                </div>
               </div>
-              <div className="text-xs text-[#1A2E22]/50 uppercase tracking-widest">
-                {label}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
