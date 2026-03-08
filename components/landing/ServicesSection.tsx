@@ -23,7 +23,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 max-w-7xl mx-auto px-4">
+    <section id="services" className="py-12 md:py-24 max-w-7xl mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-[#1A2E22]/10 pb-6">
         <h2
           className="reveal-text text-4xl md:text-5xl"
@@ -73,7 +73,7 @@ export default function ServicesSection() {
                 <span>{svc.time} delivery</span>
                 <span>•</span>
                 <a href="#contact" className="underline underline-offset-2">
-                  Get a quote →
+                  request a call →
                 </a>
               </div>
             </div>

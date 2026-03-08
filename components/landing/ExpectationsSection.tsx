@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function ExpectationsSection() {
   return (
-    <section className="bg-white py-24 text-[#1A2E22] border-t border-[#1A2E22]/10">
+    <section className="bg-white py-12 md:py-24 text-[#1A2E22] border-t border-[#1A2E22]/10">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left Column */}

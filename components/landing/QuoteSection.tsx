@@ -2,7 +2,7 @@
 
 export default function QuoteSection() {
   return (
-    <section className="py-24 px-4 bg-white border-y border-[#1A2E22]/5">
+    <section className="py-12 md:py-24 px-4 bg-white border-y border-[#1A2E22]/5">
       <div className="max-w-4xl mx-auto text-center">
         <h2
           className="reveal-text text-3xl md:text-5xl leading-tight font-light text-[#1A2E22] tracking-tight"

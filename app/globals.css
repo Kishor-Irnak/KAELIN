@@ -121,7 +121,6 @@
 }
 .word {
   display: inline-block;
-  transform: translateY(110%);
 }
 
 /* Selection color */

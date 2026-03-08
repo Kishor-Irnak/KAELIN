@@ -47,9 +47,9 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="py-24 bg-[#F3F1EB]">
+    <section id="portfolio" className="py-12 md:py-24 bg-[#F3F1EB]">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto px-4 mb-20">
+      <div className="max-w-7xl mx-auto px-4 mb-10 md:mb-20">
         <div className="flex flex-col text-center items-center">
           <h2
             className="reveal-text text-4xl md:text-5xl uppercase tracking-wider font-light text-[#1A2E22]"
@@ -90,8 +90,8 @@ export default function PortfolioSection() {
                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 alt={project.name}
               />
-              <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center translate-y-4 group-hover:translate-y-0 shadow-lg transition-all duration-300">
+              <div className="absolute inset-0 bg-black/10 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-black/30 md:bg-white/20 backdrop-blur-md border border-white/30 md:border-white/40 flex items-center justify-center translate-y-0 md:translate-y-4 group-hover:translate-y-0 shadow-lg transition-all duration-300">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M7 17L17 7M7 7h10v10"

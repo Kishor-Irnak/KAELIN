@@ -6,7 +6,7 @@ export default function ConsultationFormSection() {
   return (
     <section
       id="contact"
-      className="bg-[#F3F1EB] py-24 text-[#1A2E22] border-t border-[#1A2E22]/10"
+      className="bg-[#F3F1EB] py-12 md:py-24 text-[#1A2E22] border-t border-[#1A2E22]/10"
     >
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2
@@ -83,7 +83,7 @@ export default function ConsultationFormSection() {
               type="submit"
               className="btn-premium mt-8 w-full flex justify-center items-center gap-2 bg-[#1A2E22] text-[#F3F1EB] px-8 py-5 rounded-lg text-sm uppercase tracking-widest font-semibold transition-all"
             >
-              <span className="relative z-10">Get A Quote</span>
+              <span className="relative z-10">request a call</span>
               <ArrowRight size={16} className="relative z-10" />
             </button>
           </form>

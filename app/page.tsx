@@ -6,14 +6,12 @@ import Hero from "@/components/landing/Hero";
 import PortfolioSection from "@/components/landing/PortfolioSection";
 import ProcessSection from "@/components/landing/ProcessSection";
 import Footer from "@/components/landing/Footer";
-import CustomEcommerceSection from "@/components/landing/CustomEcommerceSection";
 import ExpectationsSection from "@/components/landing/ExpectationsSection";
 import AgencyComparisonSection from "@/components/landing/AgencyComparisonSection";
 import DiscoveryCallSection from "@/components/landing/DiscoveryCallSection";
 import ReasonsSection from "@/components/landing/ReasonsSection";
 import ConsultationFormSection from "@/components/landing/ConsultationFormSection";
 import FaqSection from "@/components/landing/FaqSection";
-import AvailableHiringSection from "@/components/landing/AvailableHiringSection";
 import PricingSection from "@/components/landing/PricingSection";
 
 export default function Page() {
@@ -47,46 +45,6 @@ export default function Page() {
           },
         },
       );
-
-      // Global Fade Up Animations
-      gsap.utils.toArray(".fade-up").forEach((el: any) => {
-        gsap.fromTo(
-          el,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 95%",
-              toggleActions: "play none none reverse",
-            },
-          },
-        );
-      });
-
-      // Global Stagger Grids
-      gsap.utils.toArray(".stagger-grid").forEach((grid: any) => {
-        const items = grid.children;
-        gsap.fromTo(
-          items,
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            stagger: 0.15,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: grid,
-              start: "top 95%",
-              toggleActions: "play none none reverse",
-            },
-          },
-        );
-      });
     };
 
     initAnimations();
@@ -96,17 +54,12 @@ export default function Page() {
     <div className="bg-[#F3F1EB] text-[#1A2E22]">
       <Navbar />
       <Hero />
-      <CustomEcommerceSection />
       <PortfolioSection />
       <PricingSection />
-      <ExpectationsSection />
       <AgencyComparisonSection />
-      <DiscoveryCallSection />
-      <ProcessSection />
       <ReasonsSection />
-      <ConsultationFormSection />
       <FaqSection />
-      <AvailableHiringSection />
+      <ConsultationFormSection />
       <Footer />
     </div>
   );

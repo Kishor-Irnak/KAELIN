@@ -71,10 +71,10 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      className="py-24 bg-[#F3F1EB] text-[#1A2E22] border-t border-[#1A2E22]/10"
+      className="py-12 md:py-24 bg-[#F3F1EB] text-[#1A2E22] border-t border-[#1A2E22]/10"
     >
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-24 fade-up">
+        <div className="text-center mb-12 md:mb-24 fade-up">
           <h2
             className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-4"
             style={{

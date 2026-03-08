@@ -53,7 +53,7 @@ const categories = [
 
 export default function CategoriesSection() {
   return (
-    <section id="categories" className="py-20 max-w-7xl mx-auto px-4">
+    <section id="categories" className="py-10 md:py-20 max-w-7xl mx-auto px-4">
       <div className="flex items-end justify-between mb-10">
         <div>
           <h3

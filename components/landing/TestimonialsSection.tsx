@@ -38,7 +38,7 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#F3F1EB] pt-24 pb-24">
+    <section className="bg-[#F3F1EB] pt-12 md:pt-24 pb-12 md:pb-24">
       <div className="text-center mb-16 px-4">
         <span className="border border-[#1A2E22]/20 px-3 py-1 rounded-full text-[10px] uppercase tracking-wide">
           Real Results

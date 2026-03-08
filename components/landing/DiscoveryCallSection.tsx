@@ -4,7 +4,7 @@ import { ArrowRight, MonitorSmartphone } from "lucide-react";
 
 export default function DiscoveryCallSection() {
   return (
-    <section className="bg-white py-24 text-[#1A2E22] border-t border-[#1A2E22]/10 overflow-hidden">
+    <section className="bg-white py-12 md:py-24 text-[#1A2E22] border-t border-[#1A2E22]/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2
           className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-4 text-[#1A2E22] fade-up"

@@ -2,9 +2,9 @@
 
 export default function Footer() {
   return (
-    <footer className="overflow-hidden bg-[#1A2E22] text-[#F3F1EB] pt-32 pb-0 relative">
+    <footer className="overflow-hidden bg-[#1A2E22] text-[#F3F1EB] pt-16 md:pt-32 pb-0 relative">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-4 gap-12 mb-24">
+        <div className="grid md:grid-cols-4 gap-12 mb-12 md:mb-24">
           {/* Brand */}
           <div className="md:col-span-1">
             <p className="text-xs font-bold uppercase tracking-widest mb-6 text-[#F3F1EB]/40">

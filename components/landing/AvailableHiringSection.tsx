@@ -4,9 +4,9 @@ import { UserPlus, Briefcase, MessagesSquare } from "lucide-react";
 
 export default function AvailableHiringSection() {
   return (
-    <section className="bg-white py-24 text-[#1A2E22]">
-      <div className="max-w-6xl mx-auto px-4 text-center border-t border-[#1A2E22]/10 pt-24">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16 mb-24 fade-up">
+    <section className="bg-white py-12 md:py-24 text-[#1A2E22]">
+      <div className="max-w-6xl mx-auto px-4 text-center border-t border-[#1A2E22]/10 pt-12 md:pt-24">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-16 mb-12 md:mb-24 fade-up">
           <h2
             className="text-3xl md:text-5xl uppercase tracking-wider font-light"
             style={{
