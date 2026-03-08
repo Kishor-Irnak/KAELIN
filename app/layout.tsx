@@ -28,6 +28,19 @@ export const metadata: Metadata = {
       "High-converting Shopify stores for every category. Starting from ₹50,000.",
     type: "website",
   },
+  icons: {
+    icon: [
+      { url: "/KAELIN/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/KAELIN/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/KAELIN/favicon.ico", sizes: "any" }
+    ],
+    apple: [
+      { url: "/KAELIN/apple-touch-icon.png" }
+    ],
+    other: [
+      { rel: "manifest", url: "/KAELIN/site.webmanifest" }
+    ]
+  }
 };
 
 export default function RootLayout({

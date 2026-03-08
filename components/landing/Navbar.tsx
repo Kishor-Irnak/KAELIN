@@ -23,53 +23,36 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 relative">
-          {/* Left: Links */}
           <div className="hidden md:flex space-x-8 text-sm font-medium text-[#1A2E22]/70">
-            <a
-              href="#services"
-              className="hover:text-[#1A2E22] transition-colors"
-            >
-              Services
-            </a>
-            <a
-              href="#categories"
-              className="hover:text-[#1A2E22] transition-colors"
-            >
-              Categories
-            </a>
-            <a
-              href="#process"
-              className="hover:text-[#1A2E22] transition-colors"
-            >
-              How It Works
-            </a>
+            {[
+              { label: "Portfolio", href: "#portfolio" },
+              { label: "Pricing", href: "#pricing" },
+              { label: "Why Us", href: "#reasons" },
+              { label: "FAQs", href: "#faq" },
+            ].map(({ label, href }) => (
+              <a
+                key={href}
+                href={href}
+                className="hover:text-[#1A2E22] transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {label}
+              </a>
+            ))}
           </div>
 
           {/* Center: Logo */}
-          <div className="flex items-center gap-2 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="text-[#1A2E22]"
-            >
-              <path
-                d="M20.5 7.5C19.5 5 17 3 12 3C6.5 3 3 6.5 3 12C3 17.5 6.5 21 12 21C17 21 19.5 19 20.5 16.5"
-                stroke="#1A2E22"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-              <path
-                d="M8 12H16M13 9L16 12L13 15"
-                stroke="#1A2E22"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          <div className="flex items-center gap-2 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>
+            <img 
+              src="/KAELIN/favicon-32x32.png" 
+              alt="KaeLin Icon" 
+              className="h-6 md:h-7 w-auto object-contain"
+            />
             <span
-              className="text-xl font-medium tracking-tighter uppercase"
+              className="text-xl font-medium tracking-tighter uppercase text-[#1A2E22]"
               style={{ fontFamily: "var(--font-newsreader), serif" }}
             >
               KaeLin
@@ -128,16 +111,23 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden pb-4 pt-2 border-t border-[#1A2E22]/5 space-y-3">
             {[
-              { label: "Services", href: "#services" },
-              { label: "Categories", href: "#categories" },
-              { label: "How It Works", href: "#process" },
+              { label: "Portfolio", href: "#portfolio" },
+              { label: "Pricing", href: "#pricing" },
+              { label: "Why Us", href: "#reasons" },
+              { label: "FAQs", href: "#faq" },
               { label: "Contact", href: "#contact" },
             ].map(({ label, href }, i) => (
               <a
                 key={i}
                 href={href}
                 className="block text-sm font-medium text-[#1A2E22]/70 hover:text-[#1A2E22] py-1 transition-colors"
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => {
+                  setMenuOpen(false);
+                  if (href !== "#contact") {
+                    e.preventDefault();
+                    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 {label}
               </a>
