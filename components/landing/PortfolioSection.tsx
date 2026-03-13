@@ -1,5 +1,7 @@
 "use client";
 
+import CTAButton from "./CTAButton";
+
 const projects = [
   {
     id: 1,
@@ -139,6 +141,10 @@ export default function PortfolioSection() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="flex justify-center mt-12 md:mt-24">
+        <CTAButton text="Start Your Project" />
       </div>
     </section>
   );

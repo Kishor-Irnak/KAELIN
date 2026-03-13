@@ -46,11 +46,13 @@ export default function Navbar() {
 
           {/* Center: Logo */}
           <div className="flex items-center gap-2 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: "smooth"})}>
-            <img 
-              src="/KAELIN/favicon-32x32.png" 
-              alt="KaeLin Icon" 
-              className="h-6 md:h-7 w-auto object-contain"
-            />
+            <div className="bg-white rounded-xl p-1.5 shadow-sm border border-[#1A2E22]/5 flex items-center justify-center">
+              <img
+                src="https://i.postimg.cc/cJ0bLjg7/image-removebg-preview.png"
+                alt="KaeLin Logo"
+                className="h-8 md:h-10 w-auto object-contain"
+              />
+            </div>
             <span
               className="text-xl font-medium tracking-tighter uppercase text-[#1A2E22]"
               style={{ fontFamily: "var(--font-newsreader), serif" }}

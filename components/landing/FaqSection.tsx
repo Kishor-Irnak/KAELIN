@@ -1,5 +1,7 @@
 "use client";
 
+import CTAButton from "./CTAButton";
+
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -34,7 +36,10 @@ export default function FaqSection() {
   ];
 
   return (
-    <section id="faq" className="bg-white py-12 md:py-24 text-[#1A2E22] border-t border-[#1A2E22]/10">
+    <section
+      id="faq"
+      className="bg-white py-12 md:py-24 text-[#1A2E22] border-t border-[#1A2E22]/10"
+    >
       <div className="max-w-4xl mx-auto px-4 text-center">
         <h2
           className="text-3xl md:text-5xl uppercase tracking-wider font-light mb-16 fade-up"
@@ -74,6 +79,23 @@ export default function FaqSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 bg-[#1A2E22] text-[#F3F1EB] rounded-3xl p-8 md:p-12 text-center md:flex md:items-center md:justify-between md:text-left border border-[#1A2E22]/10 shadow-lg">
+          <div>
+            <h3 className="text-2xl md:text-3xl font-light mb-2">
+              Still have questions?
+            </h3>
+            <p className="opacity-70 text-sm md:text-base">
+              We're here to help you build the perfect store.
+            </p>
+          </div>
+          <div className="mt-8 md:mt-0">
+            <CTAButton
+              text="Get in Touch"
+              className="bg-[#F3F1EB] text-[#001408] hover:bg-white"
+            />
+          </div>
         </div>
       </div>
     </section>

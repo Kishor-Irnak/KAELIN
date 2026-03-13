@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { db } from "@/lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export default function ContactSection() {
   const [form, setForm] = useState({
@@ -13,9 +15,19 @@ export default function ContactSection() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    try {
+      await addDoc(collection(db, "contact_leads"), {
+        ...form,
+        submittedAt: serverTimestamp(),
+        source: "Contact Section"
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting contact lead:", error);
+      alert("Something went wrong. Please try again later.");
+    }
   };
 
   const inputClass =

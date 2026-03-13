@@ -1,5 +1,8 @@
 "use client";
 
+import CTAButton from "./CTAButton";
+
+
 // SVG icons for each step — no emojis
 const StepIcons = [
   // 01 Discovery — phone/chat
@@ -90,7 +93,7 @@ export default function ProcessSection() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8 stagger-grid">
+        <div className="grid md:grid-cols-4 gap-8 stagger-grid mb-12">
           {steps.map((step, i) => (
             <div key={i} className="group relative">
               {/* Connector line */}
@@ -111,6 +114,10 @@ export default function ProcessSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12 md:mt-16">
+          <CTAButton />
         </div>
       </div>
     </section>

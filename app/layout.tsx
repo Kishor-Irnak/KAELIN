@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
+import FloatingCTA from "@/components/landing/FloatingCTA";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,16 +31,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/KAELIN/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/KAELIN/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/KAELIN/favicon.ico", sizes: "any" }
+      { url: "/KAELIN/favicon.png", type: "image/png" },
     ],
     apple: [
-      { url: "/KAELIN/apple-touch-icon.png" }
+      { url: "/KAELIN/favicon.png" }
     ],
     other: [
       { rel: "manifest", url: "/KAELIN/site.webmanifest" }
-    ]
+    ],
   }
 };
 
@@ -64,7 +63,10 @@ export default function RootLayout({
           defer
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <FloatingCTA />
+      </body>
     </html>
   );
 }

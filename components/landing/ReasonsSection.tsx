@@ -1,5 +1,7 @@
 "use client";
 
+import CTAButton from "./CTAButton";
+
 import {
   LayoutTemplate,
   Smartphone,
@@ -76,6 +78,10 @@ export default function ReasonsSection() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-16 md:mt-24">
+          <CTAButton />
         </div>
       </div>
     </section>

@@ -1,5 +1,7 @@
 "use client";
 
+import CTAButton from "./CTAButton";
+
 import { X, Check } from "lucide-react";
 
 export default function AgencyComparisonSection() {
@@ -77,6 +79,10 @@ export default function AgencyComparisonSection() {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="flex justify-center mt-12 md:mt-16">
+          <CTAButton text="Choose a Better Way" />
         </div>
       </div>
     </section>
