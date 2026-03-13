@@ -31,13 +31,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/KAELIN/favicon.png", type: "image/png" },
+      { url: "/favicon.png", type: "image/png" },
     ],
     apple: [
-      { url: "/KAELIN/favicon.png" }
+      { url: "/favicon.png" }
     ],
     other: [
-      { rel: "manifest", url: "/KAELIN/site.webmanifest" }
+      { rel: "manifest", url: "/site.webmanifest" }
     ],
   }
 };
