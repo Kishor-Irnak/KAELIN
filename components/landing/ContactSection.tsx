@@ -14,9 +14,49 @@ export default function ContactSection() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<Record<string, boolean>>({});
+
+  const handleInputChange = (field: string, value: string) => {
+    setForm((prev) => ({ ...prev, [field]: value }));
+    if (error) setError("");
+    setFieldErrors((prev) => ({ ...prev, [field]: false }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
+    setFieldErrors({});
+    const errors: Record<string, boolean> = {};
+
+    // Name Validation
+    if (form.name.trim().length < 2) {
+      setError("Please enter a valid name (at least 2 characters).");
+      errors.name = true;
+      setFieldErrors(errors);
+      return;
+    }
+
+    // Email Validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(form.email.trim())) {
+      setError("Please enter a valid email address.");
+      errors.email = true;
+      setFieldErrors(errors);
+      return;
+    }
+
+    // Phone Validation (10 digits)
+    const digitsOnly = form.phone.replace(/\D/g, "");
+    if (digitsOnly.length < 10) {
+      setError("Please enter a valid 10-digit WhatsApp number.");
+      errors.phone = true;
+      setFieldErrors(errors);
+      return;
+    }
+
+    setIsSubmitting(true);
     try {
       await addDoc(collection(db, "contact_leads"), {
         ...form,
@@ -24,9 +64,19 @@ export default function ContactSection() {
         source: "Contact Section"
       });
       setSubmitted(true);
-    } catch (error) {
-      console.error("Error submitting contact lead:", error);
-      alert("Something went wrong. Please try again later.");
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        category: "",
+        budget: "",
+        message: "",
+      });
+    } catch (err) {
+      console.error("Error submitting contact lead:", err);
+      setError("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -169,33 +219,33 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <input
-                  className={inputClass}
+                  className={`${inputClass} ${fieldErrors.name ? "border-red-500 bg-red-50/30" : ""}`}
                   placeholder="Your Name *"
                   required
                   value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  onChange={(e) => handleInputChange("name", e.target.value)}
                 />
                 <input
                   type="email"
-                  className={inputClass}
+                  className={`${inputClass} ${fieldErrors.email ? "border-red-500 bg-red-50/30" : ""}`}
                   placeholder="Email Address *"
                   required
                   value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                  onChange={(e) => handleInputChange("email", e.target.value)}
                 />
               </div>
               <input
                 type="tel"
-                className={inputClass}
+                className={`${inputClass} ${fieldErrors.phone ? "border-red-500 bg-red-50/30" : ""}`}
                 placeholder="WhatsApp / Phone Number *"
                 required
                 value={form.phone}
-                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                onChange={(e) => handleInputChange("phone", e.target.value)}
               />
               <select
                 className={inputClass}
                 value={form.category}
-                onChange={(e) => setForm({ ...form, category: e.target.value })}
+                onChange={(e) => handleInputChange("category", e.target.value)}
               >
                 <option value="">Select Store Category</option>
                 {[
@@ -215,7 +265,7 @@ export default function ContactSection() {
               <select
                 className={inputClass}
                 value={form.budget}
-                onChange={(e) => setForm({ ...form, budget: e.target.value })}
+                onChange={(e) => handleInputChange("budget", e.target.value)}
               >
                 <option value="">Select Budget Range</option>
                 {[
@@ -234,13 +284,26 @@ export default function ContactSection() {
                 className={`${inputClass} h-28 resize-none`}
                 placeholder="Tell us about your business & what you need..."
                 value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                onChange={(e) => handleInputChange("message", e.target.value)}
               />
+              {error && (
+                <p className="text-xs font-medium text-red-500 text-center animate-in fade-in slide-in-from-top-1">
+                  {error}
+                </p>
+              )}
               <button
                 type="submit"
-                className="w-full bg-[#1A2E22] text-[#F3F1EB] py-3.5 rounded-full text-sm font-medium hover:scale-105 transition-transform duration-300 shadow-lg shadow-[#1A2E22]/20"
+                disabled={isSubmitting}
+                className="w-full bg-[#1A2E22] text-[#F3F1EB] py-3.5 rounded-full text-sm font-medium hover:scale-105 transition-transform duration-300 shadow-lg shadow-[#1A2E22]/20 disabled:opacity-50 disabled:hover:scale-100 flex items-center justify-center gap-2"
               >
-                Book Free Consultation →
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-[#F3F1EB]/20 border-t-[#F3F1EB] rounded-full animate-spin" />
+                    Submitting...
+                  </>
+                ) : (
+                  "Book Free Consultation →"
+                )}
               </button>
               <p className="text-center text-[10px] text-[#1A2E22]/40">
                 No spam. No commitment. Just a friendly conversation.
